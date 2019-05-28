@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="sleep" style="height: 600px;"></div>
+</body>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+    google.charts.load("current", { packages: ["timeline"] });
+    google.charts.setOnLoadCallback(drawChart);
+    function drawChart() {
+
+        var container = document.getElementById('sleep');
+        var chart = new google.visualization.Timeline(container);
+        var dataTable = new google.visualization.DataTable();
+
+        dataTable.addColumn({ type: 'string', id: 'Room' });
+        dataTable.addColumn({ type: 'string', id: 'Name' });
+        dataTable.addColumn({ type: 'date', id: 'Start' });
+        dataTable.addColumn({ type: 'date', id: 'End' });
+        dataTable.addRows([
+
+            ['3/7', '浅い', new Date(0, 0, 0, 1, 0, 0), new Date(0, 0, 0, 5, 0, 0)],
+            ['3/7', '覚醒', new Date(0, 0, 0, 5, 0, 0), new Date(0, 0, 0, 18, 0, 0)],
+            ['3/7', 'レム', new Date(0, 0, 0, 18, 0, 0), new Date(0, 0, 0, 19, 0, 0)],
+            ['3/7', '浅い', new Date(0, 0, 0, 21, 0, 0), new Date(0, 0, 0, 23, 0, 0)],
+            ['3/7', '深い', new Date(0, 0, 0, 19, 0, 0), new Date(0, 0, 0, 21, 0, 0)],
+            ['3/7', 'レム', new Date(0, 0, 0, 23, 0, 0), new Date(0, 0, 0, 24, 0, 0)],
+            
+            ['3/8', '深い', new Date(0, 0, 0, 1, 0, 0), new Date(0, 0, 0, 2, 0, 0)],
+            ['3/8', '浅い', new Date(0, 0, 0, 2, 0, 0), new Date(0, 0, 0, 5, 0, 0)],
+            ['3/8', '覚醒', new Date(0, 0, 0, 5, 0, 0), new Date(0, 0, 0, 14, 0, 0)],
+            ['3/8', 'レム', new Date(0, 0, 0, 14, 0, 0), new Date(0, 0, 0, 16, 0, 0)],
+            ['3/8', '浅い', new Date(0, 0, 0, 16, 0, 0), new Date(0, 0, 0, 19, 0, 0)],
+            ['3/8', '覚醒', new Date(0, 0, 0, 19, 0, 0), new Date(0, 0, 0, 19, 30, 0)],
+            ['3/8', '深い', new Date(0, 0, 0, 19, 30, 0), new Date(0, 0, 0, 21, 0, 0)],
+            ['3/8', '浅い', new Date(0, 0, 0, 21, 0, 0), new Date(0, 0, 0, 23, 0, 0)],
+            ['3/8', '深い', new Date(0, 0, 0, 23, 0, 0), new Date(0, 0, 0, 24, 0, 0)],
+
+            ['3/9', '浅い', new Date(0, 0, 0, 1, 0, 0), new Date(0, 0, 0, 5, 0, 0)],
+            ['3/9', '深い', new Date(0, 0, 0, 5, 0, 0), new Date(0, 0, 0, 6, 0, 0)],
+            ['3/9', '浅い', new Date(0, 0, 0, 6, 0, 0), new Date(0, 0, 0, 12, 0, 0)],
+            ['3/9', '覚醒', new Date(0, 0, 0, 12, 0, 0), new Date(0, 0, 0, 19, 0, 0)],
+            ['3/9', 'レム', new Date(0, 0, 0, 19, 0, 0), new Date(0, 0, 0, 20, 0, 0)],
+            ['3/9', '浅い', new Date(0, 0, 0, 20, 0, 0), new Date(0, 0, 0, 21, 0, 0)],
+            ['3/9', '深い', new Date(0, 0, 0, 21, 0, 0), new Date(0, 0, 0, 24, 0, 0)],
+
+            ['3/10', '深い', new Date(0, 0, 0, 1, 0, 0), new Date(0, 0, 0, 2, 0, 0)],
+            ['3/10', '浅い', new Date(0, 0, 0, 2, 0, 0), new Date(0, 0, 0, 5, 0, 0)],
+            ['3/10', '覚醒', new Date(0, 0, 0, 5, 0, 0), new Date(0, 0, 0, 14, 0, 0)],
+            ['3/10', 'レム', new Date(0, 0, 0, 14, 0, 0), new Date(0, 0, 0, 16, 0, 0)],
+            ['3/10', '浅い', new Date(0, 0, 0, 16, 0, 0), new Date(0, 0, 0, 19, 0, 0)],
+            ['3/10', '覚醒', new Date(0, 0, 0, 19, 0, 0), new Date(0, 0, 0, 19, 30, 0)],
+            ['3/10', '深い', new Date(0, 0, 0, 19, 30, 0), new Date(0, 0, 0, 21, 0, 0)],
+            ['3/10', '浅い', new Date(0, 0, 0, 21, 0, 0), new Date(0, 0, 0, 22, 0, 0)],
+            ['3/10', '深い', new Date(0, 0, 0, 22, 0, 0), new Date(0, 0, 0, 23, 0, 0)],
+            ['3/10', '浅い', new Date(0, 0, 0, 23, 0, 0), new Date(0, 0, 0, 24, 0, 0)],
+
+            ['3/11', '浅い', new Date(0, 0, 0, 1, 0, 0), new Date(0, 0, 0, 5, 0, 0)],
+            ['3/11', '深い', new Date(0, 0, 0, 5, 0, 0), new Date(0, 0, 0, 6, 0, 0)],
+            ['3/11', '浅い', new Date(0, 0, 0, 6, 0, 0), new Date(0, 0, 0, 12, 0, 0)],
+            ['3/11', '覚醒', new Date(0, 0, 0, 12, 0, 0), new Date(0, 0, 0, 19, 0, 0)],
+            ['3/11', 'レム', new Date(0, 0, 0, 19, 0, 0), new Date(0, 0, 0, 20, 0, 0)],
+            ['3/11', '浅い', new Date(0, 0, 0, 20, 0, 0), new Date(0, 0, 0, 21, 0, 0)],
+            ['3/11', '深い', new Date(0, 0, 0, 21, 0, 0), new Date(0, 0, 0, 24, 0, 0)],
+            
+            ['3/12', '覚醒', new Date(0, 0, 0, 12, 0, 0), new Date(0, 0, 0, 14, 0, 0)],
+            ['3/12', 'レム', new Date(0, 0, 0, 14, 30, 0), new Date(0, 0, 0, 16, 0, 0)],
+            ['3/12', '浅い', new Date(0, 0, 0, 16, 30, 0), new Date(0, 0, 0, 19, 0, 0)],
+            ['3/12', '深い', new Date(0, 0, 0, 20, 30, 0), new Date(0, 0, 0, 21, 0, 0)],
+            
+            ['3/13', '覚醒', new Date(0, 0, 0, 12, 0, 0), new Date(0, 0, 0, 14, 0, 0)],
+            ['3/13', 'レム', new Date(0, 0, 0, 14, 30, 0), new Date(0, 0, 0, 16, 0, 0)],
+            ['3/13', '浅い', new Date(0, 0, 0, 16, 30, 0), new Date(0, 0, 0, 19, 0, 0)],
+            ['3/13', '深い', new Date(0, 0, 0, 20, 30, 0), new Date(0, 0, 0, 21, 0, 0)],
+            
+            ['3/14', '覚醒', new Date(0, 0, 0, 12, 0, 0), new Date(0, 0, 0, 14, 0, 0)],
+            ['3/14', 'レム', new Date(0, 0, 0, 14, 30, 0), new Date(0, 0, 0, 16, 0, 0)],
+            ['3/14', '浅い', new Date(0, 0, 0, 16, 30, 0), new Date(0, 0, 0, 19, 0, 0)],
+            ['3/14', '深い', new Date(0, 0, 0, 20, 30, 0), new Date(0, 0, 0, 21, 0, 0)]]);
+            
+        var options = {
+            colors: ['#1e90ff','#F00', '#8a2be2','#000080',],
+        };
+
+        chart.draw(dataTable, options);
+    }
+</script>
+
+</html>
